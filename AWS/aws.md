@@ -43,18 +43,3 @@ Use cases
 	The generative AI landscape is evolving rapidly, and organizations need to innovate and adapt quickly to maintain competitive 	advantage. This evolution is catalyzed by a significant surge in large language models (LLMs) that meet diverse needs. 	Organizations are building distributed architectures that leverage specific LLMs based on unique requirements. AWS serverless 	architecture, powered by AWS Lambda, is ideal for generative AI applications, enabling you to start small and scale seamlessly 	while handling distributed, event-driven workflows securely at scale.
 
 
-<h2>AWS Cloud Development Kit (AWS CDK)</h2>
- AWS CDK, a framework for defining cloud infrastructure in code and provisioning it through AWS CloudFormation.
-The AWS CDK lets you build reliable, scalable, cost-effective applications in the cloud with the considerable expressive power of a programming language. This approach yields many benefits, including:
-	-Build with high-level constructs that automatically provide sensible, secure defaults for your AWS resources, defining more 			infrastructure with less code.
-	-Use programming idioms like parameters, conditionals, loops, composition, and inheritance to model your system design from 			building blocks provided by AWS and others.
-	-Put your infrastructure, application code, and configuration all in one place, ensuring that at every milestone you have a 			complete, cloud-deployable system.
-	-Employ software engineering practices such as code reviews, unit tests, and source control to make your infrastructure more 			robust.
-	-Connect your AWS resources together (even across stacks) and grant permissions using simple, intent-oriented APIs.
-	-Import existing AWS CloudFormation templates to give your resources a CDK API.
-	-Use the power of AWS CloudFormation to perform infrastructure deployments predictably and repeatedly, with rollback on error.
-	-Easily share infrastructure design patterns among teams within your organization or even with the public.
-
-<h2>How it works</h2>
-The AWS CDK supports TypeScript, JavaScript, Python, Java, C#/.Net, and Go. Developers can use one of these supported programming languages to define reusable cloud components known as Constructs. You compose these together into Stacks and Apps.
-
