@@ -15,15 +15,15 @@ Benefits of cloud computing:
  -Cost savings
  -Deploy globally in minutes
 
-Types of cloud computing
- -Infrastructure as a Service (IaaS):
-	IaaS contains the basic building blocks for cloud IT. It typically provides access to networking features, computers (virtual or on 	dedicated hardware), and data storage space. IaaS gives you the highest level of flexibility and management control over your IT 	resources.
- -Platform as a Service (PaaS):
-	PaaS removes the need for you to manage underlying infrastructure (usually hardware and operating systems), and allows you to focus 	on the deployment and management of your applications.
- -Software as a Service (SaaS):
-	SaaS provides you with a complete product that is run and managed by the service provider. In most cases, people referring to SaaS 	are referring to end-user applications (such as web-based email). With a SaaS offering, you don’t have to think about how the 	service is maintained or how the underlying infrastructure is managed. You only need to think about how you will use that particular 	software.
-
-
+<b>Types of cloud computing</b>
+<ul>
+	<li>Infrastructure as a Service (IaaS):
+	IaaS contains the basic building blocks for cloud IT. It typically provides access to networking features, computers (virtual or on 	dedicated hardware), and data storage space. IaaS gives you the highest level of flexibility and management control over your IT 	resources.</li>
+	<li>Platform as a Service (PaaS):
+	PaaS removes the need for you to manage underlying infrastructure (usually hardware and operating systems), and allows you to focus 	on the deployment and management of your applications.</li>
+	<li>Software as a Service (SaaS):
+	SaaS provides you with a complete product that is run and managed by the service provider. In most cases, people referring to SaaS 	are referring to end-user applications (such as web-based email). With a SaaS offering, you don’t have to think about how the 	service is maintained or how the underlying infrastructure is managed. You only need to think about how you will use that particular 	software.</li>
+</ul>
 <h2>AWS Lambda</h2>
 AWS Lambda empowers you to focus solely on your code, while it handles all infrastructure management, enabling faster development, improved performance, enhanced security, and cost efficiency.
 
