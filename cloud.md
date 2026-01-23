@@ -216,5 +216,3 @@ There are several cloud service models, and three of the most commonly used are 
 <li>In Paas, you manage configuration, functionality, and scaling, but your vendor operates other things.</li>
 <li>In Saas, users have access to a whole software stack for the price of a subscription. You only manage the configuration.</li>
 </ul>
-
-
