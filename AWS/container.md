@@ -4,7 +4,7 @@
 <p>Like virtual machines (VM), containers provide the infrastructure for your custom code and applications. However, containers make operating a cloud practical, fast, and cost-effective by creating bundles that virtualize at the operating system (OS) level rather than at the hardware level. A single physical or virtual host (a server with an OS) can house multiple containers at the same time. Containers remain lightweight by sharing the OS they run on while isolating processes within user space.
 </p>
 
-![img_1.png](img_1.png)
+![img_1.png](../images/img_1.png)
 
 <p>Everything needed to run a software application successfully can be stored in a container to make development and deployment more efficient. For this reason, containers are perfect for running microservices.</p>
 

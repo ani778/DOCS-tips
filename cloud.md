@@ -52,7 +52,7 @@ In addition, cloud providers offer various resilience options for your servers: 
 </ol>
 <h2>WHEN TO USE SAAS, PAAS, AND IAAS</h2>
 
-![img.png](img.png)
+![img.png](images/img.png)
 <ul>
     <b>Use SaaS</b>
     <li>For standard solutions requiring a low level of customization and internet access via multiple device types</li>
@@ -74,7 +74,7 @@ In addition, cloud providers offer various resilience options for your servers: 
     <li>When you need to be able to change out specific hardware and software easily</li>
 </ul>
 
-![img_1.png](img_1.png)
+![img_1.png](images/img_1.png)
 <ul>
     <b>Don't Use SaaS</b>
     <li>When you need a high level of configuration, customization, or specialist integrations</li>
@@ -99,7 +99,7 @@ In addition, cloud providers offer various resilience options for your servers: 
 <p>Cloud transformation is unique to every organization and requires a close examination of goals, data, and applications 
 While organizations are unique, cloud transformation should follow the same vital steps: assessment, preparation, migration, and operation.</p>
 
-![img_2.png](img_2.png)
+![img_2.png](images/img_2.png)
 
 <h3>ASSESSMENT: CLOUD ECONOMICS</h3>
 <p>The first step is assessing the company’s needs and checking if moving to cloud would be economically beneficial.
@@ -144,7 +144,7 @@ Gartner defined seven application modernization approaches to cloud migration si
 <h3>MIGRATION: PROCESS</h3>
 <p>ach company's needs are unique, cloud migrations will follow a slightly different path every time. </p>
 
-![img_3.png](img_3.png)
+![img_3.png](images/img_3.png)
 
 <h3>CLOUD OPERATIONS</h3>
 <p><b>Cloud Operations</b>or CloudOps is a term that refers to the network, security, performance, device management, help desk, and other responsibilities that keep cloud-native apps and underlying infrastructure fully operational.
@@ -160,7 +160,7 @@ As opposed to traditional operations, CloudOps tools and skill sets align more c
 <h1>PUBLIC CLOUD PLATFORMS<hr></h1>
 <p>Currently the top three cloud providers in the world are <b>Amazon Web Services, Google Cloud Platform, and Microsoft Azure.</b> These three platforms have some common features, such as auto-scaling, security, and compliance. </p>
 
-![img_4.png](img_4.png)
+![img_4.png](images/img_4.png)
 
 <h2>AWS</h2>
 <p>Amazon was the first company to offer cloud infrastructure to developers at other companies.

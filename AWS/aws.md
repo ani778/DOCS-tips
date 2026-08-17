@@ -1,12 +1,12 @@
-<h1>What is AWS Cloud?</h1>
+# What is AWS Cloud?
 The AWS Cloud encompasses a broad set of global cloud-based products that includes compute, storage, databases, analytics, networking, mobile, developer tools, management tools, IoT, security, and enterprise applications: on-demand, available in seconds, with pay-as-you-go pricing. With over 200 fully featured services available from data centers globally, the AWS Cloud has what you need to develop, deploy, and operate your applications, all while lowering costs, becoming more agile, and innovating faster.
 For example, with the AWS Cloud, you can spin up a virtual machine, specifying the number of vCPU cores, memory, storage, and other characteristics in seconds, and pay for the infrastructure in per-second increments only while it is running. One benefit of the AWS global infrastructure network is that you can provision resources in the Region or Regions that best serve your specific use case. When you are done with the resources, you can simply delete them. With this built-in flexibility and scalability, you can build an application to serve your first customer, and then scale to serve your next 100 million.
 
-<h2>On-premises and cloud computing</h2>
+## On-premises and cloud computing
 Before the cloud, companies and organizations hosted and maintained hardware in their own data centers, often allocating entire infrastructure departments to take care of their data centers. This resulted in costly operations that made some workloads and experimentation impossible.
 The demand for compute, storage, and networking equipment increased as internet use became more widespread. For some companies and organizations, the cost of maintaining a large physical presence was unsustainable. Cloud computing emerged to solve this problem.
 
-<h2>What is cloud computing?</h2>
+## What is cloud computing?
 Cloud computing is the on-demand delivery of IT resources over the Internet with pay-as-you-go pricing. Instead of buying, owning, and maintaining physical data centers and servers, you can access technology services, such as computing power, storage, and databases, on an as-needed basis from a cloud provider like Amazon Web Services (AWS).
 
 Benefits of cloud computing:
@@ -41,5 +41,8 @@ Use cases
  -Real-time data processing
  -Generative AI:
 	The generative AI landscape is evolving rapidly, and organizations need to innovate and adapt quickly to maintain competitive 	advantage. This evolution is catalyzed by a significant surge in large language models (LLMs) that meet diverse needs. 	Organizations are building distributed architectures that leverage specific LLMs based on unique requirements. AWS serverless 	architecture, powered by AWS Lambda, is ideal for generative AI applications, enabling you to start small and scale seamlessly 	while handling distributed, event-driven workflows securely at scale.
+
+
+---------------------------
 
 
