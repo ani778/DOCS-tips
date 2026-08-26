@@ -138,3 +138,8 @@ Promise.any([
     console.log(error.errors[1]); // Error: Error!
 });
 ```
+
+### What is the difference between return and return await in async functions
+In an `async` function, `return value` simply returns the value or promise. If the value is a rejected promise, the rejection is not caught by a surrounding `try/catch` unless you `await` it first.
+
+`return await value` pauses the function until the promise settles, so a `try/catch` around it can handle errors properly
