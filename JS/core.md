@@ -77,7 +77,7 @@ for (let i = 0; i < 4; i++) {
 }
 ```
 
-## Memoization
+# Memoization
 Memoization is a functional programming technique which attempts to increase a function’s performance by caching its previously computed results. Each time a memoized function is called, its parameters are used to index the cache. If the data is present, then it can be returned, without executing the entire function. Otherwise the function is executed and then the result is added to the cache. 
 ```js
 const memoizeAddition = () => {
@@ -99,3 +99,9 @@ const addition = memoizeAddition();
 console.log(addition(20)); //output: 40 calculated
 console.log(addition(20)); //output: 40 cached
 ```
+
+# Closures
+A closure is the combination of a function bundled(enclosed) together with its lexical environment within which that function was declared. i.e, It is an inner function that has access to the outer or enclosing function’s variables, functions and other data even after the outer function has finished its execution. The closure has three scope chains.
+- Own scope where variables defined between its curly brackets
+- Outer function's variables
+- Global variables
