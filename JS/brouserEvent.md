@@ -52,4 +52,7 @@ elem.addEventListener(..., {capture: true})
 // or, just "true" is an alias to {capture: true}
 elem.addEventListener(..., true)
 ```
-
+## preventDefault()
+The preventDefault() method cancels the event if it is cancelable, meaning that the default action or behaviour that belongs to the event will not occur.
+## stopPropagation 
+The stopPropagation method is used to stop the event from bubbling up the event chain. 
