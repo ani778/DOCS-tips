@@ -241,3 +241,6 @@ delete object.property; // You cannot delete when sealed
 console.log(object.property); //Welcome to object world
 ```
 #### `The Object.isSealed()` method is used to determine if an object is sealed or not
+
+## Differences between the freeze and seal methods
+If an object is frozen using the Object.freeze() method then its properties become immutable and no changes can be made in them whereas if an object is sealed using the Object.seal() method then the changes can be made in the existing properties of the object.
