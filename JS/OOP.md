@@ -182,7 +182,8 @@ the object that is used to build `__proto__` when you create an object with the 
 new Employee().__proto__ === Employee.prototype;
 new Employee().prototype === undefined;
 ```
-![img.png](../images/img.png)
+<img width="992" height="290" alt="image" src="https://github.com/user-attachments/assets/3ed89c5f-af35-431b-b078-9a8044cdb44b" />
+
 
 # freeze method
 The `freeze()` method is used to freeze an object. Freezing an object does not allow adding new properties to an object,
