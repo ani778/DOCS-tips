@@ -46,8 +46,24 @@ React Fiber makes UI rendering more **efficient and flexible**, allowing React a
 
 
 -----------------------------------
-
-
+## Render Phases
+The React rendering lifecycle operates in three distinct phases: **Trigger, Render, and Commit.**
+1. **Trigger Phase**:
+  - Initial Mount: The first time a component is loaded onto the page.
+  - State Change: A state setter function (like setState or dispatch) is invoked.
+  - Context Update: The value of a consumed React Context changes.Parent
+  - Re-render: A parent component re-renders, trickling down to its children.
+2. **Render Phase**
+    During this phase, React calls your component functions to understand what the UI should look like. No changes are made to the actual browser DOM here.
+  - JSX Evaluation: React converts the JSX returned by components into a JavaScript object tree (the Virtual DOM / Fiber tree).
+  - Diffing & Reconciliation: For updates, React compares the new tree with the previous tree to isolate exactly what changed.
+  - Purity Requirement: This phase must be pure and predictable. Code running directly in the body of your component must not trigger side effects (e.g., modifying external variables, fetching data, or mutating the DOM).
+3. **Commit Phase**
+  - DOM Mutation
+  - Ref Updates
+  - Layout Effects
+  - Browser Paint
+  - Passive Effects
 # Reconciliation 
 Reconciliation is the process React uses to update the browser's actual DOM to match the latest UI described by your components' state and props.
 This is achieved by comparing the current virtual DOM (VDOM) with a new VDOM representation and applying only the necessary changes to the real DOM, minimizing costly direct DOM manipulations.
