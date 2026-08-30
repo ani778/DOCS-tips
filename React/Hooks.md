@@ -105,6 +105,11 @@ const FocusableInput = () => {
   return <input ref={inputRef} />;
 };
 ```
+## React.createRef()
+`React.createRef()` is a built-in React function primarily used in **class components** to create a mutable reference object. It generates an object with a single mutable property called **.current**, which can hold a reference to a DOM node or a mounted component instance.
+
+`createRef` creates a brand-new reference object on every single render, causing it to **lose its stored value** in function components.
+
 
 ## `useContext`
 The `useContext` hook in React allows functional components to read and subscribe to context values from a parent component
