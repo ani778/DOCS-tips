@@ -25,7 +25,8 @@ function MyComponent() {
   }, []);
 }
 ```
-
+## useLayoutEffect
+`useLayoutEffect` is a React Hook that fires synchronously after React mutates the DOM, but before the browser paints the screen.
 ## `useReducer`
 The `useReducer` hook follows the concept of a "reducer function," 
 which is a pure function that takes the current state and an action as input and returns a new state based on that action.
@@ -75,6 +76,11 @@ const ExpensiveComponent = ({ data }) => {
   return <p>Result: {result}</p>;
 };
 ```
+
+## React.memo
+`React.memo` is a higher-order component (HOC) used to optimize performance by skipping unnecessary re-renders of a functional component. 
+
+By default, when a parent component re-renders, all of its child components re-render as well. Wrapping a child component in memo forces React to cache the rendered output and reuse it if the incoming props have not changed.
 
 ## `useCallback`
 The `useCallback` hook is used to memoize callback functions to prevent unnecessary re-creation of functions on every render. 
