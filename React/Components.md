@@ -58,6 +58,15 @@ Function components can now manage state using Hooks (`useState, useContext`).
 With React Hooks, you can use the `useEffect` Hook to replicate 
 lifecycle behavior (like `componentDidMount`, `componentDidUpdate`, `componentWillUnmount`).
 
+## Pure components
+
+`Pure components` are the components which render the same output for the same state and props. In function components, you can achieve these pure components through memoized **React.memo()** API wrapping around the component. 
+
+But at the same time, it won't compare the previous state with the current state because function component itself prevents the unnecessary rendering by default when you set the same state again.
+
+
+
+
 ---------------------------------------------------
 
 
