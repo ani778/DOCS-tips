@@ -182,7 +182,8 @@ the object that is used to build `__proto__` when you create an object with the 
 new Employee().__proto__ === Employee.prototype;
 new Employee().prototype === undefined;
 ```
-![img.png](../images/img.png)
+<img width="992" height="290" alt="image" src="https://github.com/user-attachments/assets/3ed89c5f-af35-431b-b078-9a8044cdb44b" />
+
 
 # freeze method
 The `freeze()` method is used to freeze an object. Freezing an object does not allow adding new properties to an object,
@@ -240,3 +241,6 @@ delete object.property; // You cannot delete when sealed
 console.log(object.property); //Welcome to object world
 ```
 #### `The Object.isSealed()` method is used to determine if an object is sealed or not
+
+## Differences between the freeze and seal methods
+If an object is frozen using the Object.freeze() method then its properties become immutable and no changes can be made in them whereas if an object is sealed using the Object.seal() method then the changes can be made in the existing properties of the object.

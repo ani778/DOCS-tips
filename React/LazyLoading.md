@@ -49,3 +49,21 @@ const App = () => (
 ```
 - ***Component-Based Lazy Loading***: Useful for large, non-critical components on a single page( rich text editor, or a modal that is only displayed after a user interaction).
 - ***Asset Lazy Loading***: While React handles component code, you can lazy load images and other media using the native HTML attribute `<img src="..." loading="lazy" />`.
+
+
+# Lazy initialization
+`Lazy initialization` in React is a technique where you pass a **callback function** instead of a direct value to hooks like   `useState` or   `useReducer`. This ensures that expensive computations or resource-heavy operations **run only once during the initial render**.
+
+### ⚠️ The Problem: Direct Execution
+When you pass a function call directly into `useState`, JavaScript evaluates that function on **every render**. React safely ignores the returned value after the initial mount, but the CPU cycles are already wasted.
+```js
+// ❌ BAD: getExpensiveData() runs on EVERY re-render
+const [data, setData] = useState(getExpensiveData());
+```
+### The Solution: Lazy Initialization
+By wrapping the logic in **an anonymous arrow function**, you pass the function definition to React.
+```js
+javascript//  GOOD: getExpensiveData() runs ONLY ONCE during initial mount
+const [data, setData] = useState(() => getExpensiveData());
+```
+

@@ -25,7 +25,8 @@ function MyComponent() {
   }, []);
 }
 ```
-
+## useLayoutEffect
+`useLayoutEffect` is a React Hook that fires synchronously after React mutates the DOM, but before the browser paints the screen.
 ## `useReducer`
 The `useReducer` hook follows the concept of a "reducer function," 
 which is a pure function that takes the current state and an action as input and returns a new state based on that action.
@@ -76,6 +77,11 @@ const ExpensiveComponent = ({ data }) => {
 };
 ```
 
+## React.memo
+`React.memo` is a higher-order component (HOC) used to optimize performance by skipping unnecessary re-renders of a functional component. 
+
+By default, when a parent component re-renders, all of its child components re-render as well. Wrapping a child component in memo forces React to cache the rendered output and reuse it if the incoming props have not changed.
+
 ## `useCallback`
 The `useCallback` hook is used to memoize callback functions to prevent unnecessary re-creation of functions on every render. 
 It's especially useful when passing callbacks to child components, as it ensures that child components don't re-render unnecessarily.
@@ -105,6 +111,11 @@ const FocusableInput = () => {
   return <input ref={inputRef} />;
 };
 ```
+## React.createRef()
+`React.createRef()` is a built-in React function primarily used in **class components** to create a mutable reference object. It generates an object with a single mutable property called **.current**, which can hold a reference to a DOM node or a mounted component instance.
+
+`createRef` creates a brand-new reference object on every single render, causing it to **lose its stored value** in function components.
+
 
 ## `useContext`
 The `useContext` hook in React allows functional components to read and subscribe to context values from a parent component

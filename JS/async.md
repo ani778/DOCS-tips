@@ -35,3 +35,23 @@ async function f() {
 
 f();
 ```
+
+# Callback function
+A callback function is a function passed into another function as an argument. This function is invoked inside the outer function to complete an action. Let's take a simple example of how to use callback function
+```js
+function callbackFunction(name) {
+  console.log("Hello " + name);
+}
+
+function outerFunction(callback) {
+  let name = prompt("Please enter your name.");
+  callback(name);
+}
+
+outerFunction(callbackFunction);
+```
+The callbacks are needed because javascript is an event driven language. That means instead of waiting for a response, javascript will keep executing while listening for other events. 
+
+
+### Callback hell
+Callback Hell is an anti-pattern with multiple nested callbacks which makes code hard to read and debug when dealing with asynchronous logic. 
