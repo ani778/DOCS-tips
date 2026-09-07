@@ -133,5 +133,4 @@ export default function RefExample() {
 
 
                                                                                
-
-export default DataFetchingComponent;                                                                          
+                                                                         
