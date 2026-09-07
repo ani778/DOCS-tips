@@ -75,7 +75,8 @@ When a component inside a `<Suspense>` boundary is waiting for something (like d
 ### 🛠️ Key Use Cases
 1. Code Splitting (Lazy Loading)
 2. Data Fetching
-   ```js
+
+```js
    import { Suspense, use } from 'react';
 
 function ProfileDetails() {
