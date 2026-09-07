@@ -67,3 +67,28 @@ javascript//  GOOD: getExpensiveData() runs ONLY ONCE during initial mount
 const [data, setData] = useState(() => getExpensiveData());
 ```
 
+# React` <Suspense>`
+React` <Suspense>` is a built-in component that lets you declaratively specify a fallback UI (like a loading spinner or skeleton) while its child components are waiting for an asynchronous operation to complete. 
+
+When a component inside a `<Suspense>` boundary is waiting for something (like data or code), it **"suspends" rendering**. React catches this pause, stops rendering that component tree, and displays your fallback UI instead. Once the asynchronous asset resolves, React switches back to rendering the actual component.
+
+### 🛠️ Key Use Cases
+1. Code Splitting (Lazy Loading)
+2. Data Fetching
+   ```js
+   import { Suspense, use } from 'react';
+
+function ProfileDetails() {
+  // Directly read a promise! React suspends until this resolves.
+  const user = use(fetch('/api/user').then(res => res.json()));
+  return <p>Welcome, {user.name}!</p>;
+}
+
+export default function ProfilePage() {
+  return (
+    <Suspense fallback={<p>Fetching profile...</p>}>
+      <ProfileDetails />
+    </Suspense>
+  );
+}
+```
