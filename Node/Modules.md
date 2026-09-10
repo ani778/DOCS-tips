@@ -9,6 +9,8 @@ They help in organizing code, promoting reusability, and managing dependencies.
     - `path`: For handling file paths.
     - `os`: For interacting with the operating system.
     - `events`: For event handling
+    - `stream`: Stream handling
+    - `crypto`: Cryptographic functions
     - `cluster`: For creating child processes to handle concurrent operations.
 2. **Local (Custom) Modules**: These are modules that you write yourself. They are imported using a relative path (e.g., `require('./utils.js'`)).
 3. **Third-party (External) Modules**: These are modules created by the community and can be installed via package managers.
