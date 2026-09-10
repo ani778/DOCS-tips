@@ -35,7 +35,7 @@ RSC offers a new approach by allowing components to be partially rendered on the
 
 Server actions enable developers to offload specific logic to the server without leaving the React ecosystem. This is especially beneficial for operations like data fetching, authentication, or complex processing tasks that might affect the client’s performance.
 
-4. ** Improved work with forms (Actions API)**
+4. **Improved work with forms (Actions API)**
  - `useActionState`: new Hook introduced in React 19 for handling form action state updates. It allows you to update component state based on form action results.
   ```js
    const [state, formAction, isPending] = useActionState(fn, initialState, permalink?);
@@ -133,5 +133,4 @@ export default function RefExample() {
 
 
                                                                                
-
-export default DataFetchingComponent;                                                                          
+                                                                         
