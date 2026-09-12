@@ -16,7 +16,7 @@ The document object model is created as the HTML is parsed. The HTML may request
  - **Split CSS**: Separate out critical CSS (needed above the fold) and inline it ( <style>), while loading other styles asynchronously.
  - **Minimize file size**: Compress (Gzip/Brotli) and minify code.
  - **Use preloading**: Prioritize important fonts and styles with `<link rel="preload">`
- - 
+   
 
 
 
