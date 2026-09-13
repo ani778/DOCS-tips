@@ -1,18 +1,32 @@
 # Child Process
-In Node.js, the `child_process` module allows you to create and manage child processes. This is useful for executing external commands, running scripts, or performing tasks in parallel.
+In Node.js, the `child_process` module allows you to create and manage child processes. This is useful for executing external commands, running scripts, or performing tasks in parallel
 
-There are 4 means of creating a child process:
+The `child_process` module provides the ability to spawn new processes which has their own memory. The communication between these processes is established through IPC (inter-process communication) provided by the **operating system.**.
+
+The `Child Process` module is included in Node.js by default.
+```js
+const childProcess = require('child_process');
+
+// Or using destructuring to access specific methods
+const { exec, spawn, fork } = require('child_process');
+```
+
+The **Child Process module** provides four primary methods for creating and managing child processes:
 - exec()
 - execFile()
 - fork()
 - spawn()
+  <img width="1227" height="378" alt="image" src="https://github.com/user-attachments/assets/4ec718c8-fd88-4219-9617-573963d3cb34" />
+
+  
+
 ## exeq()
-This method will spawn a subshell and execute the command in that shell and buffer generated data.
+This method will spawn a shell and execute the command in that shell and buffer generated data.
 ```ts
-const childProcess = require('child_process');
+const { exec } = require('child_process');
 
 const execProcess = (command) => {
-  childProcess.exec(command, (error, stdout, stderr) => {
+  exec(command, (error, stdout, stderr) => {
     console.log(`stdout: ${stdout}`);
     console.log(`stderr: ${stderr}`);
 
@@ -31,6 +45,7 @@ The method `exec()` accepts the following arguments:
   - `error` - error in JavaScript
   - `stdout` - the standard output stream, which is a source of output from the program
   - `stderr` - the standard error stream, which is used for error messages and diagnostics issued by the program
+    
 ## execFile()
 If you need to execute a file without using a shell, the `execFile()` function is what you need. It behaves exactly like the `exec()` function but does not use a shell, which makes it a bit more efficient.
 ```ts
@@ -114,6 +129,14 @@ process.send({ hello: 'from child process' });
 Child process received: { hello: 'from parent process' }
 Parent process received: { hello: 'from child process' }
 ```
+
+### Benefits of fork()
+- Each forked process gets its own V8 instance and memory
+- Isolates CPU-intensive work from the main event loop
+- Allows communication between processes via messages
+- Helps utilize multiple CPU cores
+
+  
 ## How to decide which method to use?
 
 ![img_1.png](../images/img_1.png)
