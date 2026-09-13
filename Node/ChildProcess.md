@@ -141,6 +141,47 @@ Parent process received: { hello: 'from child process' }
 
 ![img_1.png](../images/img_1.png)
 
+## Interprocess Communication (IPC)
+Child processes created with `fork()` can communicate with the parent process through a built-in IPC channel using `send()` and the `message` event.
+```js
+// In parent.js
+const { fork } = require('child_process');
+const child = fork('worker.js');
+
+// Send different types of data
+child.send({
+  command: 'compute',
+  data: [1, 2, 3, 4, 5],
+  options: {
+    multiply: 2,
+    subtract: 1
+  }
+});
+
+// Receive the result
+child.on('message', (result) => {
+  console.log('Computation result:', result);
+  child.disconnect(); // Clean up the IPC channel
+});
+```
+```js
+// In worker.js
+process.on('message', (msg) => {
+   if (msg.command === 'compute') {
+    const result = msg.data.map(num => num * msg.options.multiply - msg.options.subtract);
+
+    // Send the result back to the parent
+    process.send({ result });
+  }
+});
+```
+### Killing a Child Process with `child.kill()`
+
+### Detached Processes
+You can create detached child processes that continue running independently of the parent:`child.unref()`
 
 
-
+## Choose the Right Method:
+- Use `exec()` for simple commands with limited output
+- Use `spawn()` for long-running processes or large outputs
+- Use `fork()` for CPU-intensive Node.js operations
