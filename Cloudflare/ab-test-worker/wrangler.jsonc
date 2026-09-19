@@ -1,0 +1,8 @@
+{
+	"name": "ab-test-worker",
+	"compatibility_date": "2026-09-19",
+	"main": "src/index.js",
+	"observability": {
+		"enabled": true,
+	},
+}

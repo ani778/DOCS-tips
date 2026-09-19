@@ -1,5 +1,5 @@
 # Child Process
-In Node.js, the `child_process` module allows you to create and manage child processes. This is useful for executing external commands, running scripts, or performing tasks in parallel.
+The `child_process` module provides the ability to spawn new processes which has their own memory. The communication between these processes is established through IPC (inter-process communication) provided by the **operating system.**
 
 There are 4 means of creating a child process:
 - exec()
