@@ -145,7 +145,17 @@ console.log(eventEmitter.eventNames());
 `[ 'myEvent', 'myEvent2' ]
 [ 'myEvent2' ]`
 
+### off(event, listener)
+Alias for removeListener
+
 ### removeAllListeners()
 This is used to remove all active event listeners from an EventEmitter instance.
+
+### listeners(event)
+Returns an array of listeners for the specified event.
+
+### emit(event, [arg1], [arg2], [...])
+Execute each of the listeners in order with the supplied arguments. Returns true if the event had listeners, false otherwise.
+
 
 
