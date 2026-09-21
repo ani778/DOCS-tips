@@ -10,9 +10,48 @@ When a **Cache Rule** sets a `custom cache key`, the resulting cache entry is in
 - Custom cache keys that include headers, cookies, or other request properties will prevent dashboard single-file purge from working, because the dashboard cannot send those values in a purge request.
 - Even without Cache Rules, Cloudflare's default cache key includes certain request headers. 
 
+# Cache keys
+A Cache Key is an identifier that Cloudflare uses for a file in our cache, and the Cache Key Template defines the identifier for a given HTTP request.
+
+A default cache key includes:
+1. Full URL
+	- scheme - could be HTTP or HTTPS.
+	- host - for example, www.cloudflare.com
+	- URI with query string - for example, /logo.jpg?utm_source=newsletter
+2. Origin header sent by client (for CORS support).
+3. `x-http-method-override`,` x-http-method`, and `x-method-override` headers.
+4. `x-forwarded-host`, `x-host`, `x-forwarded-scheme (unless http or https)`,` x-original-url`, `x-rewrite-url`, and `forwarded` headers.
+
+### Cache Key Settings
+The following fields control the Cache Key Template.
+##### Query String
+The query string controls which URL query string parameters go into the Cache Key. You can `include` specific query string parameters or `exclude` them using the respective fields. When you include a query string parameter, the `value` of the query string parameter is used in the Cache Key.
+
+##### Headers
+Headers control which headers go into the Cache Key. Similar to Query String, you can `include` specific headers or `exclude` default headers.
+
+##### Host
+Host determines which host header to include in the Cache Key.
+- If `Use original host` (`resolved: false` in the API), Cloudflare includes the Host header in the HTTP request sent to the origin.
+- If` Resolved host` (`resolved: true` in the API), Cloudflare includes the Host header that was resolved to get the `origin IP` for the request. 
+
+##### Cookie
+Like `query_string` or `header`, `cookie` controls which cookies appear in the Cache Key. You can either `include` the cookie value or check for the presence of a particular cookie.
 
 
-## Append dates to cookies to use with A/B testing
+# Cloudflare cache responses
+The` CF-Cache-Status` header output indicates whether a resource is cached or not. 
+### HIT
+The resource was found in Cloudflare's cache.
+### MISS
+was not present in Cloudflare's cache at request time, so it was served from the origin web server. Responses that Cloudflare chooses not to cache return `BYPASS` instead of `MISS`.
+### EXPIRED
+The resource was found in Cloudflare's cache but was expired and served from the origin web server.
+### STALE
+The resource was served from Cloudflare's cache but was expired. 
+
+
+# Append dates to cookies to use with A/B testing
 Dynamically set a cookie expiration and test group.
 ```js
 export default {

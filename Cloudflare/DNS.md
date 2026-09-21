@@ -11,15 +11,11 @@ The `Domain Name System (DNS)` translates human-readable domain names (like exam
 DNS records are instructions that live in the authoritative DNS servers and provide information about a zone. This includes what IP address is associated with a particular domain, but can also cover many other use cases, such as directing emails to a mail server or validating ownership of a domain.
 
 
+# DNS routing
 
-# Proxy status
-While your DNS records contain information about your domain, the proxy status controls whether HTTP/HTTPS traffic for that record routes through Cloudflare's network or goes directly to your origin server.
+Cloudflare `DNS routing` uses an orange-cloud proxy status to pass your domain's web traffic through Cloudflare's global network instead of sending it directly to your origin server.
 
-When a record is **Proxied,** Cloudflare sits between your visitors and your server — optimizing, caching, and protecting traffic along the way.
-When a record is **DNS-only**, Cloudflare responds with your server's actual IP address and does not route HTTP/HTTPS traffic through its network.
-
-### Benefits
-When you set a DNS record to Proxied — shown as an orange cloud icon in the dashboard, also known as "orange-clouded" — Cloudflare can:
-- Protect your origin server (the server hosting your website or application) from DDoS attacks .
-- Optimize, cache, and protect all requests to your application.
-- Apply your Cloudflare product configurations (such as WAF rules, caching, and redirect rules) to incoming traffic.
+**How Cloudflare DNS Routing Works**:
+- `Proxied (Orange Cloud):` Cloudflare intercepts incoming HTTP/HTTPS traffic. This applies security features like the Web Application Firewall (WAF), DDoS protection, and CDN caching before sending requests safely to your server.
+- `DNS-only (Grey Cloud):` Cloudflare acts strictly as a basic DNS resolver. It responds with your server's actual IP address, and traffic bypasses Cloudflare’s proxy network entirely.
+- `Record Types:` Only A, AAAA, and CNAME records can be toggled between Proxied and DNS-only states. Other records like MX or TXT remain DNS-only by default.
